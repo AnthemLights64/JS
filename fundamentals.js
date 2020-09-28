@@ -1,5 +1,6 @@
 const aCar = {
     owner : "Joe Bloggs",
+    
     // previous_owners: [
     //     "Pat Smith - 1 Main Street",
     //     "Sheila Dwyer - 2 High Street"
@@ -8,12 +9,16 @@ const aCar = {
         { name: "Pat Smith", address: "1 Main Street" },
         { name: "Sheila Dwyer", address: "2 High Street" }
     ],
+    
     // type : 'Toyota Corolla 1.8',
     type : {
         make : 'Toyota',
         model : 'Corolla',
         cc :1.8
     },
+
+    features : ['Parking assist', 'Alarm', 'Tow-bar'],
+
     //registration : '201WD1058'
     registration : { year: 201, county: "WD", number: 1058}
 };
@@ -53,3 +58,7 @@ console.log(
         ' - ' + 
         aCar.previous_owners[0].address
 );
+
+for(let i=0;i<aCar.features.length;i+=1){
+    console.log(aCar.features[i]);
+}
